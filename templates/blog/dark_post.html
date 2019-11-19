@@ -1,0 +1,319 @@
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Blog Reiner - Dark (2019)</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor3/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css3/blog-post.css' %}" rel="stylesheet">
+
+  <!-- Cambiar imagen con un click -->
+
+
+  <!-- Panel JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #343a40;
+  border: solid 1px #181818;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Reiner Blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'base:inicio' %}">Inicio
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">Dark</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          por
+          <a href="#">Matías Rivas Gálvez</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Publicado el 5 de Septiembre de 2019</p>
+
+        <hr>
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="https://cde.laprensa.e3.pe/ima/0/0/2/2/2/222578.jpg" alt="">
+
+        <hr>
+
+        <!-- Post Content -->
+        <blockquote class="blockquote">
+          <p class="mb-0">"La distinción entre pasado, presente y futuro es sólo una ilusión obstinadamente persistente."</p>
+          <footer class="blockquote-footer">Albert Einstein
+            <cite title="Source Title"></cite>
+          </footer>
+        </blockquote>
+        <p>Dark es una de esas series que no entendemos muy bien lo que está ocurriendo en un principio. La serie empieza en el 21 de Junio de 2019, vemos un hombre sentado en un taller sellando una carta para luego presenciar el suicidio de éste. La carta tiene una instrucción clara: No abrir antes del 4 de Noviembre a las 10:13 PM. Vemos que éste hombre es padre de familia.
+          Jonas, su hijo y protagonista de esta historia, quiere entender la decisición de su padre. </p>
+
+        <p>Durante el primer capítulo nos presentan la mayoría de los personajes que viven en el pueblo de Winden en el 2019. Erik Obendorf un joven estudiante, se encuentra desaparecido. </p>
+
+        <H1> Jonas</H1>
+
+        <p>En primer lugar tenemos a Jonas, un joven de 17 años quien busca una respuesta al suicidio de su padre, vive con su madre Hannah, esposa del difunto Michael Kahnwald. </p>
+
+        <img src="{% static 'img3/jonas1.jpeg' %}" width="730" height="350">
+        <br>
+        </br>
+
+        <p>Es acá donde las cosas se ponen misteriosas. En la escuela se reúnen todos los padres para encontrar el paradero de Erik, nadie tiene idea dónde podría estar. Por otro lado Jonas y sus amigos creen que Erik, esconde droga en las cuevas. Al momento de llegar, Franziska se encontraba allí, con una bolsa con drogas.
+          esto nos hace pensar que realmente era de él, pero inmediatamente después comienzan unos ruidos extraños en la cueva, los chicos, aterrados corren del lugar, Jonas le dice a Mikkel que vaya con él, pero con el miedo éste último se pierde. Nuestro protagonista, ve la imagen de su padre para luego correr a encontrarse con los demás. 
+         Cuando se reúnen, se dan cuenta que falta uno de ellos: Mikkel ha desaparecido. </p>
+
+         <H1> La Familia Nielsen</H1>
+
+         <img src="{% static 'img3/mikkel_trick.jpg' %}" width="730" height="350">
+        <br>
+        </br>
+        <blockquote class="blockquote">
+          <p class="mb-0">"La pregunta no es cómo, sino cuando."</p>
+          <footer class="blockquote-footer">Mikkel Nielsen
+            <cite title="Source Title"></cite>
+          </footer>
+        </blockquote>
+
+        <p>Mikkel Nielsen es un niño de 11 años, hijo de Ulrich y Katharina Nielsen. Él tiene 2 hermanos: Magnus y Martha, quienes harán lo imposible para encontrar a su hermano.</p>
+        <p>Este muchacho se encuentra perdido y lo vemos salir de la cueva como si nada, pero todo está muy distinto de lo que recuerda. De camino a casa ve que los autos son diferentes, al momento de intentar entrar a su propia casa, la cerradura no es la misma, un joven Ulrich lo recibe, pero éste no le reconoce.
+          Mikkel, confundido ve un diario en el suelo con una noticia acerca de Chernóbil, se da cuenta que es 5 de Noviembre de 1986.
+        </p>
+
+        <img src="{% static 'img3/diario.jpg' %}"width="730" height="350">
+        <br>
+        </br>
+        
+        <div id="flip"> <img src="{% static 'img3/advertencia.png' %}" width="24" height="24">Atención: Alerta de Spoiler a partir de este momento. Haz click aquí para continuar. <img src="{% static 'img3/advertencia.png' %}" width="24" height="24"></div>
+        
+        <div id="panel">
+        
+    
+  <H3> Ulrich Nielsen</H3>
+  <img src="{% static 'img3/ulrich1.jpg' %}" width="540" height="530">
+  
+  <p>Ulrich es el padre de un joven Mikkel quien desaparece al principio de la serie, él es un oficial de policía de Winden.
+      <br>
+      </br>
+      <H2> Personalidad</H2>
+      Rebelde y resentido cuando era adolescente, Ulrich crece para convertirse en un hombre de familia despreocupado y amoroso (aunque infiel).
+      Sin embargo, después de que su hijo Mikkel desaparece y los recuerdos de la desaparición de su hermano resurgen, se compromete inequívocamente a encontrarlos. 
+      Finalmente, se vuelve imprudente y obsesivo hasta el punto de intentar asesinar a un niño.
+      <br>
+      </br>
+      <H3>1986</H3>
+      <p>Ulrich es visto como un joven problemático en 1986. La desaparición de su hermano, Mads Nielsen, y la incapacidad de la policía para localizarlo lo dejan profundamente resentido.
+         Él canaliza esta emoción en rebeldía, desde usar una chaqueta con el eslogan punk "No Future" hasta escuchar música fuerte y agresiva.</p>
+        </p>
+        <dl><dd><i>"My only aim is to take many lives<br />The more the better I feel"</i>
+        </dd></dl>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-P8_wY9CldQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+      
+        <p>Se hace amigo de la joven Hannah Kahnwald después de que ambos se encuentran durante una noche de tormenta en una parada de autobús.
+           Hannah está profundamente enamorada de él, pero él no se da cuenta, y sus intereses románticos están dirigidos a Katharina.</p>
+          
+
+</div>
+ 
+        
+
+        <hr>
+
+        <!-- Comments Form -->
+        <div class="card my-4">
+          <h5 class="card-header">Deja un comentario:</h5>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Single Comment -->
+        <div class="media mb-4">
+          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+          <div class="media-body">
+            <h5 class="mt-0">Commenter Name</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          </div>
+        </div>
+
+        <!-- Comment with nested comments -->
+        <div class="media mb-4">
+          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+          <div class="media-body">
+            <h5 class="mt-0">Commenter Name</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+            <div class="media mt-4">
+              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+              <div class="media-body">
+                <h5 class="mt-0">Commenter Name</h5>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </div>
+            </div>
+
+            <div class="media mt-4">
+              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+              <div class="media-body">
+                <h5 class="mt-0">Commenter Name</h5>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+
+        <!-- Search Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Buscar</h5>
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Buscar...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">Ir</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Categorías</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">Series</a>
+                  </li>
+                  <li>
+                    <a href="#">Películas</a>
+                  </li>
+                  <li>
+                    <a href="#">Anime</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">Videojuegos</a>
+                  </li>
+                  <li>
+                    <a href="#">Otros</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Curiosidades</h5>
+          <div class="card-body">
+            <p>Dark es la primera serie de origen Alemán producida por Netflix.</p> 
+            <p>Muchas de las escenas se filmaron en los bosques cerca de Berlín.</p>
+            <p>La fecha 12 de Noviembre también es una fecha clave en "Volver al Futuro" (1985)</p>
+            <p>Cada vez que se cambia una escena en el tiempo, suena un reloj.</p>
+            <p>En el Episodio 4 de la segunda temporada Franziska Doppler está dando una presentación acerca de los universos paralelos.</p>
+            <p>Los viajes en el tiempo de la serie están basados en el modelo propuesto por Stephen Hawking.</p>
+            <p>La máquina del tiempo que aparece en la serie está basada en la de la película 'The Time Machine' de Simon Wells.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  
+
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Blog Reiner 2019</p>
+    </div>
+    <div>Icons made by <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/"             title="Flaticon">www.flaticon.com</a></div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>
